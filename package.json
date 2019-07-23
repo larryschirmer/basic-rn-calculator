@@ -1,0 +1,83 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "test": "jest",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "ios-storybook": "rnstl && expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "emotion-theming": "^10.0.10",
+    "expo": "^33.0.0",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-web": "^0.11.4",
+    "styled-components": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-links": "^5.1.8",
+    "@storybook/addons": "^5.1.8",
+    "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react-native": "^5.1.8",
+    "@types/expo": "^32.0.13",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.20",
+    "@types/react-native": "^0.57.63",
+    "@types/styled-components": "^4.1.16",
+    "babel-loader": "^8.0.6",
+    "babel-preset-expo": "^5.1.1",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-handlebarlabs": "^0.0.3",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-native-storybook-loader": "^1.8.0",
+    "react-native-testing-library": "^1.9.1",
+    "react-native-typescript-transformer": "^1.2.12",
+    "react-test-renderer": "^16.8.6",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "private": true,
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src"
+      ],
+      "pattern": "**/*.stories.ts?(x)",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  }
+}
